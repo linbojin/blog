@@ -16,12 +16,12 @@ tags: tools
 ## Setup Hexo
 Make sure you have installed node.js and git.
 
-  ```bash
-	$ npm install -g hexo-cli
-	$ hexo init blog    
-	$ cd blog
-	$ hexo new "my first blog"
-	```
+```bash
+$ npm install -g hexo-cli
+$ hexo init blog    
+$ cd blog
+$ hexo new "my first blog"
+```
 
 ## Setup MWeb
 1. Install MWeb in App Store
@@ -58,6 +58,7 @@ Make sure you have installed node.js and git.
 	```
 
 ## Tips
+### Back up `source` folder and add **version control**
 Markdown source files will be inside `{blog}/source` and this folder will not be tracked by git. So I sync this important folder to cloud:
 
 ```bash
@@ -66,6 +67,16 @@ $ vim _config.yml # point source_dir to the new synced path
 	
 # Directory
 source_dir: {Dropbox}/blog/source
+```
+
+### Add README.md to repo
+Create README.md inside `{source}` folder and modify `{blog}/_config.yml`, so that README.md can introduce your repo on github:
+
+```bash
+$ vim _config.yml
+	
+# Directory
+skip_render: README.md
 ```
 
 Ref: [Hexo](https://hexo.io/docs/index.html), [MWeb for Octpress](http://zh.mweb.im/mweb-1.4-add-floder-octpress-support.html) 
