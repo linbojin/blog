@@ -58,26 +58,24 @@ $ hexo new "my first blog"
 	```
 
 ## Tips
-### Back up `source` folder and add **version control**
-Markdown source files will be inside `{blog}/source` and this folder will not be tracked by git. So I sync this important folder to cloud:
-
-```bash
-$ cp -r {blog}/source {Dropbox}/blog/source
-$ vim _config.yml # point source_dir to the new synced path  
+1. Back up `source` folder and add **version control**: markdown source files will be inside `{blog}/source` and this folder will not be tracked by git. So I sync this important folder to cloud:
 	
-# Directory
-source_dir: {Dropbox}/blog/source
-```
+	```bash
+	$ cp -r {blog}/source {Dropbox}/blog/source
+	$ vim _config.yml # point source_dir to the new synced path  
+		
+	# Directory
+	source_dir: {Dropbox}/blog/source
+	```
 
-### Add README.md to repo
-Create README.md inside `{source}` folder and modify `{blog}/_config.yml`, so that README.md can introduce your repo on github:
+2. Add README.md to repo: create README.md inside `{source}` folder and modify `{blog}/_config.yml`, so that README.md can introduce your repo on github:
 
-```bash
-$ vim _config.yml
-	
-# Directory
-skip_render: README.md
-```
+	```bash
+	$ vim _config.yml
+		
+	# Directory
+	skip_render: README.md
+	```
 
 Ref: [Hexo](https://hexo.io/docs/index.html), [MWeb for Octpress](http://zh.mweb.im/mweb-1.4-add-floder-octpress-support.html) 
 
