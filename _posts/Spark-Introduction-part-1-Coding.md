@@ -96,7 +96,41 @@ spark.executor.memory 10g
 ```bash
 MASTER=local[4] ADD_JARS=code.jar ./spark-shell
 
-MASTER=spark://localhost:7077 ./spark-shell
+spark-shell --master spark://localhost:7077
+```
+
+SparkConf - Configuration for Spark Applications
+
+```bash
+$ spark-shell --conf spark.logConf=true
+16/01/13 14:13:07 INFO SparkContext: Running Spark version 1.6.0
+16/01/13 14:13:07 INFO SparkContext: Spark configuration:
+spark.app.name=Spark shell
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.history.fs.logDirectory=/tmp/spark-log-directory
+spark.jars=
+spark.logConf=true
+spark.master=local[*]
+spark.repl.class.uri=http://172.30.64.148:57710
+spark.submit.deployMode=client
+
+scala> sc.getConf.toDebugString
+res0: String =
+spark.app.id=local-1452665588896
+spark.app.name=Spark shell
+spark.driver.host=172.30.64.148
+spark.driver.port=57711
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.externalBlockStore.folderName=spark-e0f9f7c6-2759-44e9-bc5e-423fba7b16ad
+spark.history.fs.logDirectory=/tmp/spark-log-directory
+spark.jars=
+spark.logConf=true
+spark.master=local[*]
+spark.repl.class.uri=http://172.30.64.148:57710
+spark.submit.deployMode=client
 ```
 
 ```bash

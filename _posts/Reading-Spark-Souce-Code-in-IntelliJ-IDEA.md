@@ -86,6 +86,7 @@ Useful IDEA Shortcuts:
 	command + o : search classes
 	command + b : go to implementation
 	command + [ : go back to the previous location
+	shift + command + F : search files 
 
 Several important classes:
 
